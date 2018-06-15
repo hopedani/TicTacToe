@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!--
+Name:  Daniel Hope
+Assignment:  Assignment 1
+Date:  Jan. 23, 2017
+
+App Description: This application invokes a classic 2 player Tic Tac Toe game, 
+where the user(s) can reset the game and play over and over again!
+Page Description: This is the index/main page that allows the user(s) to play 
+the game.
+Files: ticTacToeScript.js - contains the functionality of the game
+       style.css - the styles for the application
+-->
+<html>
+  <head>
+    <title>TicTacToe</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <header>
+      <h1>Tic Tac Toe!</h1>
+    </header>
+
+    <!-- table that makes up the Tic Tac Toe playing area -->
+    <table>
+      <tr>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+    </table>
+
+    <!-- displays which player's turn it is, and the game reset button -->
+    <p id="hideMe">Player <span id="player">X</span> Go!
+      <button id="reset">Reset Game</button>
+    </p>
+    
+    <!-- footer section displaying creator and location of creation -->
+    <footer>Daniel Hope @ Sheridan SYST10199 Web Programming
+    </footer>
+
+    <!-- 
+    results box that sends message to player(s) about results of game, 
+    and hides the box when game is in progress/when the reset button has been
+    selected 
+    -->
+    <div id="message">
+      <p>GAME OVER!</p>
+      <h3 id="winner"></h3>
+      <p>&mdash;click anywhere in the box to dismiss this message&mdash;</p>
+    </div>
+    <div id="overlay"></div>
+    <script type="text/javascript" src="scripts/ticTacToeScript.js"></script>
+  </body>
+</html>

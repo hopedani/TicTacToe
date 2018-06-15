@@ -1,0 +1,82 @@
+/*
+Name:  Daniel Hope
+Assignment:  Assignment 1
+Date:  Jan. 23, 2017
+
+Page Description: This is the main CSS file for the application and defines
+all the styles required for the game.
+Files: index.html - the main page with the Tic Tac Toe playing area
+       ticTacToeScript.js - source for all functionality of application
+*/
+body {
+  font-family: sans-serif;
+  font-size: 14pt;
+  margin: 0 auto;
+  text-align: center;
+  width: 680px;
+}
+
+/* styles for the game's inner area */
+table {
+  margin: 0 auto;
+}
+
+td {
+  border: 1px solid blue;
+  height: 50px;
+  font-size: 1.6em;
+  font-family: sans-serif;
+  width: 50px;
+}
+
+/* turning off borders to give the play area that classic hash tag feel */
+tr:first-child td {
+  border-top: none;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+td:first-child {
+  border-left: none;
+}
+td:last-child {
+  border-right: none;
+}
+
+/* used as a place holder for element to hide "Player Go" message before 
+game starts and after game finishes */
+#hideMe {
+    
+}
+
+/* box for end of game results, hidden until game is over */
+#message {
+  background-color: #f9ecf2;
+  border: 1px solid #660066;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px black, -1px -1px 5px white;
+  display: none;
+  font-weight: bold;
+  height: 30%;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  top: 50px;
+  width: 80%;
+  z-index: 200;
+}
+
+/* produces a partially transparent grey for the whole screen when results box
+is diplayed(when game is over), hidden during game play*/
+#overlay {
+  background-color: rgba(20, 20, 20, 0.4);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
